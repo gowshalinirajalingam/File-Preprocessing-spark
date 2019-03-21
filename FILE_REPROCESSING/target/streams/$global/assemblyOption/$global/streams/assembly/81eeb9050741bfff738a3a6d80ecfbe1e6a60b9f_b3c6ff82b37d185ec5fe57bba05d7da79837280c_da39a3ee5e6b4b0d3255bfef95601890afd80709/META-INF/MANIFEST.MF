@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: RabbitMQ Scala Client
+Implementation-Version: 0.1.8
+Specification-Vendor: Relayr
+Specification-Title: RabbitMQ Scala Client
+Implementation-Vendor-Id: io.relayr
+Specification-Version: 0.1.8
+Implementation-URL: https://github.com/relayr/rabbitmq-scala-client
+Implementation-Vendor: Relayr
+

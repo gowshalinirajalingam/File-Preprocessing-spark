@@ -1,0 +1,4 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/gawshalini/Documents/HSS/HSS_FILE_REPROCESSING_4_withLog/src/main/resources/log4j.properties,/home/gawshalini/Documents/HSS/HSS_FILE_REPROCESSING_4_withLog/target/scala-2.12/classes/log4j.properties)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/gawshalini/Documents/HSS/HSS_FILE_REPROCESSING_4_withLog/src/main/resources/MSC050120170625000000176477GCDR.dat.00.IUC,/home/gawshalini/Documents/HSS/HSS_FILE_REPROCESSING_4_withLog/target/scala-2.12/classes/MSC050120170625000000176477GCDR.dat.00.IUC)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/gawshalini/Documents/HSS/HSS_FILE_REPROCESSING_4_withLog/src/main/resources/aaa,/home/gawshalini/Documents/HSS/HSS_FILE_REPROCESSING_4_withLog/target/scala-2.12/classes/aaa)[0m

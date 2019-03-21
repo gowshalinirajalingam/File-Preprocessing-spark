@@ -1,0 +1,40 @@
+create jar file for a spark project
+--------------------------------------
+1)create assembly.sbt file inside 'project[project_name]Source root' folder 
+2)paste this code in that file to add assembly in the project
+	addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.7")
+
+3) in build.sbt file add this code 
+	
+	assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = true, includeDependency = true)
+	assemblyJarName in assembly := "hss_file_reprocessing.jar"
+
+	assemblyMergeStrategy in assembly := {
+	  case "META-INF/services/org.apache.spark.sql.sources.DataSourceRegister" => MergeStrategy.concat
+	  case PathList("META-INF", "services", "org.apache.hadoop.fs.FileSystem") => MergeStrategy.filterDistinctLines
+	  case PathList("META-INF", xs @ _*) => MergeStrategy.discard
+	  case "application.conf" => MergeStrategy.concat
+	  case "reference.conf" => MergeStrategy.concat
+
+	  case PathList("com","rabbitmq", xs @ _*) => MergeStrategy.last
+
+	  case x => MergeStrategy.last
+	}
+
+Note: u can add new libraries using PathList() in assembly
+
+4)right click in the main project and open in terminal
+	Run 'sbt assembly'
+		gawshalini@Gowshalini:~/Documents/HSS/HSS_FILE_REPROCESSING_4_withLog$ sbt assembly
+
+5)The jar file will be created under
+	/home/gawshalini/Documents/HSS/HSS_FILE_REPROCESSING_4_withLog/target/scala-2.12
+6)right click the jar file and open it in terminal
+7) then run 'java -jar <jar file name>'
+	gawshalini@Gowshalini:~/Documents/HSS/HSS_FILE_REPROCESSING_4_withLog/target/scala-2.12$ java -jar hss_file_reprocessing.jar 
+
+
+	
+
+
+
